@@ -1,0 +1,43 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/mixins.scss' as *;
+.nav {
+ background-color: $bg-secondary-color;
+ height: 83vh;
+ padding: 2.25rem 1.15rem;
+ border-radius: .625rem;
+ @include flexColumn;
+ justify-content: space-between;
+ align-items: center;
+ position: sticky;
+ top: 1.5rem;
+
+ &_Logo{
+  width: 2.2rem;
+  height: 1.8rem;
+  color: $logo-color;
+ }
+
+ &_Links{
+  @include flexColumn;
+  row-gap: 3rem;
+
+  &_Icon{
+   width: 1.5rem;
+   height: 1.5rem;
+   cursor: pointer;
+   transition: all 0.25s ease-in;
+  }
+
+  &_IconDefault{
+   color: $default-icon-color;
+  }
+  &_IconActive{
+   color: $active-icon-color
+  }
+ }
+
+ &_User{
+  width: 1.7rem;
+  height: 1.7rem;
+ }
+}

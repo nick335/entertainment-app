@@ -1,4 +1,5 @@
-import './sass/global.scss'
+import Aside from '@/Components/Layout/aside'
+import '../sass/global.scss'
 import type { Metadata } from 'next'
 import { Inter, Outfit } from 'next/font/google'
 
@@ -21,7 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='layout'>
+          <Aside />
+          {children}
+        </div>
+      </body>
     </html>
   )
 }

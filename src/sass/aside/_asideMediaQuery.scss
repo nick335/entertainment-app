@@ -1,0 +1,42 @@
+@use '../abstract/mediaQuery.scss' as *;
+
+@media #{$media-tablet-xl}{
+ .nav{
+  top: 0;
+  flex-direction: row;
+  height: fit-content;
+  border-radius: 0rem;
+  border-bottom-right-radius: .625rem;
+  border-bottom-left-radius: .625rem;
+  z-index: 50;
+  padding: 1.5rem 2rem;
+
+  &_Links{
+   flex-direction: row;
+   column-gap: 5rem;
+  }
+ }
+}
+@media #{$media-mobile}{
+ .nav{
+  padding: 1.5rem;
+  &_Links{
+   column-gap: 3rem;
+
+   
+  }
+ }
+}
+@media #{$media-mobile-sm}{
+ .nav{
+  padding: 1.5rem 1rem;
+  &_Links{
+   column-gap: 2rem;
+
+   &_Icon{
+    width: 1.3rem;
+    height: 1.3rem;
+   }
+  }
+ }
+}

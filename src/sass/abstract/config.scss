@@ -1,0 +1,31 @@
+@use './color.scss' as *;
+@use './mediaQuery.scss' as *;
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+ background-color: $bg-primary-color;
+ color: $text-primary-color;
+}
+li{
+ list-style: none;
+}
+a{
+ text-decoration: none;
+ color: inherit;
+}
+.layout{
+ padding-top: 1.5rem;
+ padding-left: 1.5rem;
+ // background-color: red;
+ display: flex;
+}
+@media #{$media-tablet-xl}{
+ .layout{
+  padding-top: 0;
+  padding-left: 0;
+  display: block;
+ }
+}

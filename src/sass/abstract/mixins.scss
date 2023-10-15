@@ -2,12 +2,6 @@
  display: flex;
  align-items: center;
 }
-
-@mixin defaultBtn{
- border: none;
- outline: none;
- cursor: pointer;
-}
 @mixin justFlex{
  display: flex;
 }
