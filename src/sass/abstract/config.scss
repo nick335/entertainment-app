@@ -8,6 +8,7 @@
 body{
  background-color: $bg-primary-color;
  color: $text-primary-color;
+ font-family: var(--font-outfit);
 }
 li{
  list-style: none;
@@ -19,13 +20,38 @@ a{
 .layout{
  padding-top: 1.5rem;
  padding-left: 1.5rem;
- // background-color: red;
  display: flex;
+
+ &_children{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+ }
 }
 @media #{$media-tablet-xl}{
  .layout{
   padding-top: 0;
   padding-left: 0;
   display: block;
+
+  &_children{
+   width: 100%;
+   padding: 0 2rem;
+   margin-top: 1.5rem;
+  }
+ }
+}
+@media #{$media-mobile}{
+ .layout {
+  &_children{
+   padding: 0 1.5rem;
+  }
+ }
+}
+@media #{$media-mobile-sm}{
+ .layout {
+  &_children{
+   padding: 0 1rem;
+  }
  }
 }

@@ -28,12 +28,20 @@
    transition: all 0.25s ease-in;
   }
 
+  @media (hover: hover){
+   &_IconDefault:hover{
+    color: $hover-icons-color;
+    transition: all 0.25s ease-in;
+   }
+  }
+
   &_IconDefault{
    color: $default-icon-color;
   }
   &_IconActive{
    color: $active-icon-color
   }
+
  }
 
  &_User{

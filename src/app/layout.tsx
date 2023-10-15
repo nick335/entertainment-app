@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 const outfit = Outfit({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
-  // variable: '"''
+  variable: '--font-outfit'
 })
 
 export const metadata: Metadata = {
@@ -22,10 +22,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={outfit.variable}>
         <div className='layout'>
           <Aside />
-          {children}
+          <div className='layout_children'>
+            {children}
+          </div>
         </div>
       </body>
     </html>

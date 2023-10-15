@@ -1,8 +1,12 @@
+import Search from '@/Components/Utility/Form/Search'
 import React from 'react'
 
 const BookMarks = () => {
   return (
-    <div>BookMarks</div>
+    <div>
+      <Search placeholder='Search for BookMarks' />
+      <h3>Bookmarks</h3>
+    </div>
   )
 }
 
