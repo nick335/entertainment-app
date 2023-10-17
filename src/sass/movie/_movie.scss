@@ -1,0 +1,11 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/mixins.scss' as *;
+.movie{
+
+ &_genres{
+  @include genres;
+  @include flexSpaceBetween;
+  @include odd-even-styling($bg-box-color3, $bg-box-color);
+ 
+ }
+}

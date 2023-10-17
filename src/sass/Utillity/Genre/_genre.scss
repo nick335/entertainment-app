@@ -1,0 +1,19 @@
+@use '../../abstract/color.scss' as *;
+@use '../../abstract/mixins.scss' as *;
+
+.genre{
+ width: 11rem;
+ height: 11rem;
+ flex-grow: 1;
+ border-radius: 0.5rem;
+ cursor: pointer;
+ padding: 2rem;
+ @include flexCenter;
+
+ &_name{
+  font-weight: 500;
+  font-family: var(--font-outfit);
+  font-size: 1.25rem;
+  text-align: center;
+ }
+}

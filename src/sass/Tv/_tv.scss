@@ -1,0 +1,12 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/mixins.scss' as *;
+
+.tv{
+
+ &_genres{
+  @include genres;
+  @include flexSpaceBetween;
+  @include odd-even-styling($bg-box-color2, $bg-box-color);
+  
+ }
+}

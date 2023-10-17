@@ -22,20 +22,20 @@
  display: flex;
  flex-direction: column;
 }
-@mixin container {
- max-width: 1030px;
- margin: 0 auto;
-}
-
 @mixin flexColumReverse{
  display: flex;
  flex-direction: column-reverse;
 }
-@mixin containerxl {
- max-width: 990px;
- margin: 0 auto;
+@mixin odd-even-styling($odd-color, $even-color){
+ div:nth-child(odd){
+  background-color: $odd-color;
+ }
+ div:nth-child(even){
+  background-color: $even-color;
+ }
 }
-@mixin containerlg {
- max-width: 870px;
- margin: 0 auto;
-}
+@mixin genres{
+ flex-wrap: wrap;
+ gap: 0.9rem;
+ margin-top: 2.5rem;
+} 
