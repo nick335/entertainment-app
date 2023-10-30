@@ -1,0 +1,64 @@
+@use '../../abstract/mediaQuery.scss' as *;
+
+@media #{$media-mobile}{
+ .TrendingContentBox{
+  
+  &_Parent{
+   width: 15rem;
+   height: 8.75rem;
+  }
+
+  &_contentDiv{
+
+   &_SubDiv{
+
+    p{
+     font-size: .6875rem;
+    }
+   }
+   &_header{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    max-width: 12.5rem;
+   }
+  }
+ }
+}
+@media #{$media-desktop}{
+ .ContentBox{
+
+  &_Parent{
+   height: 8.75rem;
+  }
+  
+  &_contentDiv{
+
+   &_header{
+    width: 12.5rem;
+   }
+  }
+ }
+}
+@media #{$media-tablet}{
+ .ContentBox{
+
+  &_Parent{
+   height: 8.3125rem;
+  }
+  &_contentDiv{
+
+   &_SubDiv{
+
+    p{
+     font-size: .6875rem;
+    }
+   }
+
+   &_header{
+    width: 9.375rem;
+    font-size: .875rem;
+   }
+  }
+ }
+}

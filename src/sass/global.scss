@@ -7,7 +7,11 @@
 @use './aside/asideMediaQuery';
 @use './Utillity/Form/form';
 @use './Utillity/Form/formMediaQuery';
+@use './Utillity/loader/loader';
 @use './Tv/tv';
 @use './movie/movie';
 @use './Utillity/Genre/genre';
+@use './Utillity/contentBox/contentBox';
+@use './Utillity/contentBox/contentBoxMediaQuery';
+@use './Home/home';
 

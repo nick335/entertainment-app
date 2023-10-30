@@ -1,0 +1,147 @@
+@use '../../abstract/color.scss' as *;
+
+.TrendingContentBox{
+ width: fit-content;
+ height: fit-content;
+ position: relative;
+ border-radius: 0.5rem;
+ cursor: pointer;
+
+ &_Parent{
+  position: relative;
+  object-fit: fill;
+  width: 29.375rem;
+  height: 14.375rem;
+  border-radius: 0.5rem;
+
+  &::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: hsl(223, 30%, 9%);
+   opacity: 50%;
+   border-radius: 0.5rem;
+  }
+
+  img{
+   border-radius: 0.5rem;
+  }
+ }
+
+ 
+
+ &_contentDiv{
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+
+  &_SubDiv{
+   display: flex;
+   margin-bottom: 0.25rem;
+   align-items: center;
+   column-gap: 0.5rem;
+
+   p{
+    font-size: .9375rem;
+    font-weight: 300;
+    // display: none;
+   }
+
+   div{
+    font-size: 1rem;
+    display: flex;
+    span{
+     position: relative;
+     top: -50%;
+     transform: translateY(-30%);
+     margin-right: 0.2rem;
+     // color: red;
+    }
+   }
+   
+  }
+
+  &_header{
+   text-transform: capitalize;
+   text-overflow: ellipsis;
+   font-weight: 500;
+   font-size: 1.5rem;
+   max-width: 25rem;
+  }
+ }
+}
+
+.ContentBox{
+ flex-grow: 1;
+ flex-basis: 20%;
+ width: 100%;
+ min-width: 11.5625rem;
+ cursor: pointer;
+
+ &_Parent {
+  position: relative;
+  width: 100%;
+  height: 10.875rem;
+
+  img{
+   border-radius: 0.5rem;
+   height: 0px;
+   width: 0px;
+   min-width: 100%;
+   max-width: 100%;
+   min-height: 100%;
+   max-height: 100%;
+   object-fit: cover;
+   display: block;
+   inset: 0px;
+  }
+ }
+
+ &_contentDiv{
+  margin-top: 0.5rem;
+
+  &_SubDiv{
+   display: flex;
+   margin-bottom: 0.25rem;
+   align-items: center;
+   column-gap: 0.5rem;
+
+   p{
+    font-size: .8125rem;
+    font-weight: 300;
+    color: #C3C3C6;
+    text-transform: capitalize;
+   }
+
+   div{
+    font-size: 1rem;
+    display: flex;
+    span{
+     position: relative;
+     top: -50%;
+     transform: translateY(-30%);
+     margin-right: 0.2rem;
+     // color: red;
+    }
+   }
+
+   &_icon{
+    width: 1rem;
+    height: 1rem;
+    color: #C3C3C6;
+   }
+   
+  }
+
+  &_header{
+   text-transform: capitalize;
+   text-overflow: ellipsis;
+   font-weight: 500;
+   font-size: 1.125rem;
+   width: 16.75rem;
+   overflow: hidden;
+   white-space: nowrap;
+  }
+ }
+}
