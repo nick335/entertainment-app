@@ -5,13 +5,18 @@
 @use './abstract/mixins.scss';
 @use './aside/aside';
 @use './aside/asideMediaQuery';
+@use './Home/home';
+@use './Tv/tv';
+@use './Tv/tvMediaQuery';
+@use './movie/movie';
+@use './movie/movieMediaQuery';
 @use './Utillity/Form/form';
 @use './Utillity/Form/formMediaQuery';
 @use './Utillity/loader/loader';
-@use './Tv/tv';
-@use './movie/movie';
 @use './Utillity/Genre/genre';
 @use './Utillity/contentBox/contentBox';
 @use './Utillity/contentBox/contentBoxMediaQuery';
-@use './Home/home';
+@use './Utillity/pagination/pagination';
+
+
 

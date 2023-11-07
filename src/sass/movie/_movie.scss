@@ -7,5 +7,12 @@
   @include flexSpaceBetween;
   @include odd-even-styling($bg-box-color3, $bg-box-color);
  
+  &_collectionHeader{
+   @include CollectionHeader;
+  }
+
+  &_collection{
+   @include CollectionWrapper;
+  }
  }
 }

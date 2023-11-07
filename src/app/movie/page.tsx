@@ -10,14 +10,11 @@ const MoviesPage = async () => {
   const data = await response.json()
   const genres: Array<genre> = data.genres.genres
   return (
-    <main className='movie'>
-      <Search placeholder='Search for movies' />
-      <section className='movie_genres'>
-        { genres.map((each) => {
-          return <Genre key={each.id} id={each.id} name={each.name}  />
-        }) }
-      </section>
-    </main>
+    <section className='movie_genres'>
+      { genres.map((each) => {
+        return <Genre link={`/movie/genre/${each.id}?name=${each.name}&page=1`} key={each.id} id={each.id} name={each.name}  />
+      }) }
+    </section>
   )
 }
 

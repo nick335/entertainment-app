@@ -53,3 +53,13 @@
  align-items: center;
  gap: 1rem;
 }
+@mixin CollectionHeader{
+ font-size: 2rem;
+ font-weight: 300;
+ text-transform: capitalize;
+ margin-bottom: 2.5rem;
+}
+@mixin CollectionHeaderSm{
+ font-size: 1.25rem;
+ margin-bottom: 1.5rem;
+}

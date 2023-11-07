@@ -7,6 +7,13 @@
   @include genres;
   @include flexSpaceBetween;
   @include odd-even-styling($bg-box-color2, $bg-box-color);
+
+  &_collectionHeader{
+   @include CollectionHeader;
+  }
   
+  &_collection{
+   @include CollectionWrapper;
+  }
  }
 }

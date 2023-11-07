@@ -10,15 +10,11 @@ const TvPage = async () => {
   const data = await response.json()
   const genres: Array<genre> = data.genres.genres
   return (
-    <main className='tv'>
-      <Search placeholder='Search for Tv series' />
-      
-      <section className='tv_genres'>
-        { genres.map((each) => {
-          return <Genre key={each.id} id={each.id} name={each.name}  />
-        }) }
-      </section>
-    </main>
+    <section className='tv_genres'>
+      { genres.map((each) => {
+        return <Genre link={`tv/genre/${each.id}?name=${each.name}&page=1`} key={each.id} id={each.id} name={each.name}  />
+      }) }
+    </section>
   )
 }
 

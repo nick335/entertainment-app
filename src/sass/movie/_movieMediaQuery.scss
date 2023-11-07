@@ -1,0 +1,16 @@
+@use '../abstract/color.scss' as *;
+@use '../abstract/mixins.scss' as *;
+@use '../abstract/mediaQuery.scss' as *;
+
+
+@media #{$media-tablet}{
+  .movie {
+
+   &_genres{
+
+    &_collectionHeader{
+     @include CollectionHeaderSm;
+    }
+   }
+  }
+}

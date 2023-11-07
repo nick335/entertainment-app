@@ -1,4 +1,5 @@
 export type genre = {
  id: number,
- name: string
+ name: string,
+ link: string,
 }
