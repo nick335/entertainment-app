@@ -1,6 +1,8 @@
 import ContentBox from '@/Components/Utility/ContentBox/ContentBox'
+import PageLimit from '@/Components/Utility/Notification/PageLimit'
 import PaginationController from '@/Components/Utility/PaginationController/PaginationController'
-import { fetchedMovieData, fetchedTVData } from '@/types/content'
+import { fetchedMovieData } from '@/types/content'
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 
@@ -17,7 +19,14 @@ type props = {
 }
 
 const Page = async ({ params, searchParams }:props ) => {
-  const response = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=${searchParams.page}&with_genres=${params.id}`, {
+  const pageNumber = `${searchParams.page}`
+  const containsOnlyNumbers: boolean = /^\d+$/.test(pageNumber)
+  if(!searchParams.name || !searchParams.page || !containsOnlyNumbers){
+    notFound()
+  }else if(searchParams.page > 500){
+    return <PageLimit />
+  }
+  const response = await fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=${searchParams.page}&sort_by=popularity.desc&with_genres=${params.id}`, {
     headers: {
       accept : 'application/json',
       Authorization : process.env.API_READ_ACCESSTOKEN ? process.env.API_READ_ACCESSTOKEN : ''
@@ -27,7 +36,9 @@ const Page = async ({ params, searchParams }:props ) => {
   const data = await response.json()
   const moviesData: Array<fetchedMovieData> = data.results 
 
-  console.log(data)
+  if(data.total_results === 0){
+    notFound()
+  }
   return (
     <section>
       <h3 className='movie_genres_collectionHeader'>{searchParams.name}</h3>

@@ -1,0 +1,28 @@
+@use '../abstract/mixins.scss' as *;
+@use  '../abstract/mediaQuery.scss' as *;
+
+.NotFound{
+ font-family: Arial, Helvetica, sans-serif;
+ height: calc(100vh - 3.5rem);
+ @include flexCenter;
+ flex-direction: column;
+ font-weight: 300;
+ row-gap: 1rem;
+
+ &_header{
+  font-weight: 400;
+  font-size: 1.5rem;
+ }
+
+ p{
+  text-align: center;
+ }
+}
+
+@media #{$media-tablet-xl}{
+ .NotFound{
+  height: calc(100dvh - 6.3rem);
+  height: calc(100vh - 6.3rem);
+  padding-bottom: 1.5rem;
+ }
+}

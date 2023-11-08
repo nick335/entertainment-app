@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 
 const MovieGenrepage = async () => {
- redirect('/')
+ redirect('/tv/genre/28?name=Action&page=1')
   return null
 }
 
