@@ -37,3 +37,4 @@ export type displayContent = {
  img: string,
  type: string,
 }
+

@@ -5,12 +5,8 @@
 
 @media #{$media-tablet}{
   .movie {
-
-   &_genres{
-
-    &_collectionHeader{
+   &_collectionHeader{
      @include CollectionHeaderSm;
-    }
    }
-  }
+ }
 }
