@@ -1,0 +1,74 @@
+@use '../../abstract/color.scss' as *;
+@use '../../abstract/mixins.scss' as *;
+@use '../../abstract/mediaQuery.scss' as *;
+
+
+@media #{$media-lg-desktop}{
+ .description{
+  max-width: none;
+  margin: 0;
+ }
+}
+@media #{$media-tablet-xl}{
+ .description{
+  flex-direction: column;
+
+  &_ImageSection{
+   width: 100%;
+   padding: 0 8rem;
+  }
+  &_Content{
+   width: 100%;
+   margin-top: 2rem;
+
+   &_ratings{
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 1rem;
+
+    &_header{
+     text-align: center;
+    }
+   }
+
+   &_HeaderDiv{
+    text-align: center;
+   }
+  }
+ }
+}
+@media #{$media-tablet}{
+ .description{
+
+  &_Content{
+
+   &_HeaderDiv{
+
+    &_header{
+     font-size: 1.875rem;
+     line-height: 2.25rem;
+     margin-bottom: 0.25rem;
+    }
+    &_qoute{
+     font-size: 0.875rem;
+    }
+   }
+  }
+ }
+}
+@media #{$media-mobile}{
+ .description{
+
+  &_ImageSection{
+   padding: 0 5rem;
+  }
+ }
+}
+@media #{$media-mobile-xsm}{
+ .description{
+
+  &_ImageSection{
+   padding: 0 4rem;
+  }
+ }
+}
