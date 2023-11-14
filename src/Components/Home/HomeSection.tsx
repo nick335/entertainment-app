@@ -11,7 +11,7 @@ import getRandomItemsFromArray from '@/Hooks/useGetRandomItemsFromArray';
 
 
 
-const HomeSection = ({ header, type, apiUrl }: homesection) => {
+const HomeSection = ({ header, type, apiUrl, seemore }: homesection) => {
   const { data, error, isLoading } = useSWR(apiUrl, fetcher)
   const fetchedData: Array<fetchedTVData | fetchedMovieData> = data
   const displayData: Array<fetchedTVData | fetchedMovieData> = getRandomItemsFromArray(fetchedData, 6) || []
@@ -21,6 +21,7 @@ const HomeSection = ({ header, type, apiUrl }: homesection) => {
      <HomeSectionHeader 
       header= {header}
       type={type}
+      link={seemore}
      />
        { isLoading && <div className='loader'><Loader /></div> }
       { displayData && displayData?.length > 0 && <div className='home_section_Collection-wrapper'>

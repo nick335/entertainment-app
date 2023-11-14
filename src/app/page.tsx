@@ -21,6 +21,7 @@ export default function Home() {
                   header={each.header}
                   type={each.type}
                   apiUrl={each.apiUrl}
+                  seemore={each.seemore}
                 />
       }) }
       { TvData.map((each, idx) => {
@@ -29,6 +30,7 @@ export default function Home() {
                   header={each.header}
                   type={each.type}
                   apiUrl={each.apiUrl}
+                  seemore={each.seemore}
                 />
       }) }
     </main>
