@@ -2,14 +2,14 @@ import React from 'react'
 
 type props = {
  header: string
- content?: string
+ content: string | number
 }
 
-const DescriptionContentSubHeader = ({ header }: props) => {
+const DescriptionContentSubHeader = ({ header, content }: props) => {
   return (
     <div className='description_Content_SubDivs_container'>
      <h3>{header}</h3>
-     <p>118 min</p>
+     <p>{content}</p>
     </div>
   )
 }

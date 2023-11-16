@@ -5,7 +5,7 @@ import Movie from '../icons/Movie'
 const TrendingContentBox = () => {
   return (
     <div  className='TrendingContentBox'>
-     <ResponsiveImage parentStyle='TrendingContentBox_Parent' ImageBlurredStyle='TrendingContentBox_Parent_ImgBlur' ImageDefaultStyle='TrendingContentBox_Parent_Img'  />
+     <ResponsiveImage parentStyle='TrendingContentBox_Parent' ImageBlurredStyle='TrendingContentBox_Parent_ImgBlur' ImageDefaultStyle='TrendingContentBox_Parent_Img' alt='name' src='wdw' />
      <div className='TrendingContentBox_contentDiv'>
       <div className='TrendingContentBox_contentDiv_SubDiv'>
        <p>2023</p>

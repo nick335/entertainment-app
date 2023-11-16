@@ -1,27 +1,18 @@
+import { Cast } from '@/types/content'
 import React from 'react'
 
-const Casts = () => {
- return (
-  <h4>Nicholas Erigo</h4>
- )
+type props = {
+ casts: Cast[]
 }
 
-const DescriptionContentCasts = () => {
+const DescriptionContentCasts = ({ casts }: props) => {
   return (
     <div className='description_Content_casts'>
      <h3 className='description_Content_subHeaders'>Casts</h3>
      <ul className='description_Content_ul'>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
-      <li>Nicholas Erigo</li>
+      {casts.map((cast) => {
+       return <li key={cast.cast_id}>{cast.name}</li>
+      })}
      </ul>
     </div>
   )

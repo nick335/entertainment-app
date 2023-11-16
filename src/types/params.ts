@@ -9,6 +9,10 @@ export type apiTvParams = {
  getTvParams: Array<string>
 }
 
+export type getParams = {
+ getParams: Array<string>
+}
+
 export type genreSearchParams = {
  name: string
  page: number

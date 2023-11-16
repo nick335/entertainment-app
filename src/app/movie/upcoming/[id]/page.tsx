@@ -19,13 +19,12 @@ const UpcomingPages = async ({ params }: props) => {
  }
  const response = await fetch(`${process.env.APP_URL}/api/movie/upcoming/${params.id}`)
  const result = await response.json()
- console.log(result)
  const data = result.response
  const moviesData: Array<fetchedMovieData> = data.results
 
   return (
     <section>
-     <h3 className='movie_collectionHeader'>Top Rated Movies</h3>
+     <h3 className='movie_collectionHeader'>Upcoming Movies</h3>
      <MoviesCollectionDisplay data={moviesData} />
      <PaginationController 
        currentPage={params.id || 1}
