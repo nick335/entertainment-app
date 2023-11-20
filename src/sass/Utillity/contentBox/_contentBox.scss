@@ -98,6 +98,37 @@
   }
  }
 
+ &_ImageDiv{
+  position: relative;
+  border-radius: 0.5rem;
+  // display: none;
+
+  &_bookmark{
+   position: absolute;
+   top: 0.6rem;
+   right: 0.5rem;
+
+   &_default{
+    color: $text-primary-color;
+    fill: none;
+    transition: all 0.25s ease-in;
+
+    @media (hover: hover){
+     &:hover{
+      color: $hover-icons-color;
+      transition: all 0.25s ease-in;
+      transform: scale(1.1);
+     }
+    }
+   }
+
+   &_active{
+    color: $logo-color;
+    fill: $logo-color;
+   }
+  }
+ }
+
  &_contentDiv{
   margin-top: 0.5rem;
 

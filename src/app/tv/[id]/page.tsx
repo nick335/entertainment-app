@@ -24,7 +24,7 @@ const DescriptionTvSeries = async ({ params }: props) => {
   return (
     <section className='description'>
      <DescriptionImage 
-       src={TvData.backdrop_path || TvData.poster_path}
+       src={TvData.poster_path || TvData.backdrop_path }
        alt={TvData.name}
      />
      <TvDescriptionContent 
