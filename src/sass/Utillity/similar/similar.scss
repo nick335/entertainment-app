@@ -1,0 +1,26 @@
+@use '../../abstract/mixins.scss' as *;
+@use '../../abstract/color.scss' as *;
+@use '../../abstract/mediaQuery.scss' as *;
+
+.similar{
+ margin-top: 3rem;
+ max-width: 90%;
+ margin: 0 auto ;
+
+ &_header{
+  @include CollectionHeader;
+ }
+
+ &_collection{
+  @include CollectionWrapper;
+ }
+ &_loadercollection{
+  @include CollectionWrapper;
+ }
+}
+
+@media #{$media-lg-desktop}{
+ .similar{
+  max-width: none;
+ }
+}

@@ -9,7 +9,7 @@ interface props {
 export default function MovieLayout({ children }:props){
  return (
   <main className="movie">
-   <Search placeholder="Search for Movie" />
+   <Search placeholder="Search for Movie" searchWhat="movie" />
    {children}
   </main>
  )

@@ -9,7 +9,7 @@ interface props {
 export default function TvLayout({ children }:props){
  return (
   <main className="tv">
-   <Search placeholder="Search for Tv series" />
+   <Search placeholder="Search for Tv series" searchWhat="tv" />
    {children}
   </main>
  )
