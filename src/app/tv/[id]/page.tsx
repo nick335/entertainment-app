@@ -21,7 +21,7 @@ const DescriptionTvSeries = async ({ params }: props) => {
   })
   const result = await res.json()
   const TvData: TVShow = result.response
-
+  if(result.error) return <h3>{result.error}</h3>
   return (
     <>
       <section className='description'>

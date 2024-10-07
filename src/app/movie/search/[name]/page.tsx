@@ -22,6 +22,7 @@ const MovieSearchPage = async ({params, searchParams}: props) => {
  // if(pageNumber > data.total_pages ){
  //  return notFound()
  // }
+ if(result.error) return <h3>{result.error}</h3>
   return (
     <section>
      <h3 className='movie_collectionHeader'>Found {data.total_results} results for {name}</h3>

@@ -9,15 +9,13 @@ import BookmarkCollection from '@/Components/Utility/CollectionsDisplay/Bookmark
 
 const BookMarks = () => {
   const {BookmarksData, setBookmarksData} = useStore()
-  const fetchBookmarks = () => {
+
+  useEffect(() => {
     const storedBookmarks = getLocalStorageItem<displayContent[]>('Bookmarks')
     if(storedBookmarks){
       setBookmarksData(storedBookmarks)
     }
-  }
-  useEffect(() => {
-    fetchBookmarks()
-  }, [])
+  }, [setBookmarksData])
   return (
     <div>
       <Search placeholder='Search for BookMarks' />

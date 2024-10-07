@@ -9,6 +9,7 @@ const MoviesPage = async () => {
   });
   const data = await response.json()
   const genres: Array<genre> = data.genres.genres
+  if(data.error) return <h3>{data.error}</h3>
   return (
     <section className='movie_genres'>
       { genres.map((each) => {

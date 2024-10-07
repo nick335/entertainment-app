@@ -4,8 +4,10 @@ import { MdLocalMovies, MdMovie } from 'react-icons/md'
 import { PiTelevisionBold, PiGridFourFill } from 'react-icons/pi'
 import { HiOutlineBookmark, HiUserCircle  } from 'react-icons/hi'
 import Link from 'next/link'
-import isRouteActive from '@/Hooks/isRouteActive'
+import useIsRouteActive from '@/Hooks/useIsRouteActive'
+
 const Aside = () => {
+  const isRouteActive = useIsRouteActive
   return (
     <nav  className='nav'>
       <MdMovie className='nav_Logo' />

@@ -32,6 +32,7 @@ const Page = async ({ params, searchParams }:props ) => {
   if(data.total_results === 0){
     notFound()
   }
+  if(data.error) return <h3>{data.error}</h3>
   return (
     <section>
       <h3 className='movie_collectionHeader'>{searchParams.name}</h3>

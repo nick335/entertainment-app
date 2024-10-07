@@ -17,6 +17,7 @@ const TvSearchPage = async ({params, searchParams}: props) => {
  const result = await res.json()
  const data = result.response
  const TvsData: fetchedTVData[]  = data.results
+ if(result.error) return <h3>{result.error}</h3>
   return (
     <section>
      <h3 className='movie_collectionHeader'>Found {data.total_results} results for {name}</h3>

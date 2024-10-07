@@ -22,9 +22,10 @@ const Popularpage = async ({ params }: props) => {
  const data = result.response
  const moviesData: Array<fetchedMovieData> = data.results
  
- if(data.total_results === 0){
+ if(data?.total_results === 0){
   notFound()
  }
+ if(result.error) return <h3>{result.error}</h3>
   return (
     <main>
      <h3 className='movie_collectionHeader'>Popular Movies</h3>

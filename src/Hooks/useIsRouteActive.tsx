@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-export default function isRouteActive(route: string){
+export default function useIsRouteActive(route: string){
  const pathname = usePathname()
  const [isActive, setIsActive] = useState(false)
 

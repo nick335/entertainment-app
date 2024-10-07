@@ -23,6 +23,7 @@ const MovieDescriptionPage = async ({ params }: props) => {
  const result = await res.json()
  const data = result.response
  const movieData: Movie = data
+ if(result.error) return <h3>{result.error}</h3>
   return (
     <>
       <section className='description'>

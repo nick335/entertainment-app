@@ -21,6 +21,7 @@ const NowPlayingPages = async ({ params }: props) => {
  const result = await response.json()
  const data = result.response
  const moviesData: Array<fetchedMovieData> = data.results
+ if(result.error) return <h3>{result.error}</h3>
   return (
     <section>
      <h3 className='movie_collectionHeader'>Now Playing</h3>
