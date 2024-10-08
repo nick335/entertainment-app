@@ -5,8 +5,8 @@ import { NextResponse } from "next/server"
 export async function GET() {
   try {
     const res = await fetch(`https://api.themoviedb.org/3/genre/tv/list?language=en`, {
-        method: 'GET',
-        headers: getHeaders()
+        headers: getHeaders(),
+        next: { revalidate: 1 }
       })
 
       if (!res.ok) {

@@ -3,13 +3,13 @@ import React from 'react'
 import Genre from '@/Components/Utility/Genre/Genre';
 import { genre } from '@/types/genre';
 
-const MoviesPage =  () => {
-  // const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/getMovieGenres`, {
-  //   next: {  revalidate: 1 }
-  // });
-  // const data = await response.json()
+const MoviesPage = async () => {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/getMovieGenres`, {
+    next: {  revalidate: 1 }
+  });
+  const data = await response.json()
   const genres: Array<genre> = []
-  // if(data.error) return <h3>{data.error}</h3>
+  if(data.error) return <h3>{data.error}</h3>
   return (
     <section className='movie_genres'>
       { genres.map((each) => {
