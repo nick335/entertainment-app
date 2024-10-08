@@ -5,7 +5,7 @@ import React from 'react'
 
 const TvPage = async () => {
   const response = await fetch(`${process.env.APP_URL}/api/getTvGenres`, {
-    next: {  revalidate: 0 }
+    next: {  revalidate: 1 }
   });
   const data = await response.json()
   const genres: Array<genre> = data.response.genres

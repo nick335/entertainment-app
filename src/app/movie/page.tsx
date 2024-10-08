@@ -5,7 +5,7 @@ import { genre } from '@/types/genre';
 
 const MoviesPage = async () => {
   const response = await fetch(`${process.env.APP_URL}/api/getMovieGenres`, {
-    next: {  revalidate: 0 }
+    next: {  revalidate: 1 }
   });
   const data = await response.json()
   const genres: Array<genre> = data.response.genres
