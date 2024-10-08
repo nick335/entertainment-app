@@ -16,6 +16,7 @@ const TrendingMovies = () => {
      <HomeSectionHeader 
       header='trending'
       type='movie'
+      link='/movie/trending/1'
      />
      <div className='home_section_Trending-wrapper'>
       <TrendingContentBox /> 
