@@ -8,7 +8,7 @@ const TvPage = async () => {
     next: {  revalidate: 0 }
   });
   const data = await response.json()
-  const genres: Array<genre> = data.genres.genres
+  const genres: Array<genre> = data.response.genres
   if(data.error) return <h3>{data.error}</h3>
   return (
     <section className='tv_genres'>
